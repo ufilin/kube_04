@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: service-backend
+spec:
+  selector:
+    app: my-app-backend
+  ports:
+  - name: service-backend
+    protocol: TCP
+    port: 80

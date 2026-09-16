@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-app-backend
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: my-app-backend
+  template:
+    metadata:
+      labels:
+        app: my-app-backend
+    spec:
+      containers:
+      - name: backend
+        image: wbitt/network-multitool:latest
+        ports:
+          - containerPort: 80
