@@ -13,12 +13,16 @@
 
 ### Проверка изнутри кластера (ClusterIP)
 
-📸 *[Скриншот: вывод обеих curl-команд внутри test-pod]*
+<p align="center">
+  <img src="kube_04-1-1.png" width="800">
+</p>
 
 ### Проверка снаружи кластера (NodePort)
 
 
-📸 *[Скриншот: curl к NodePort]*
+<p align="center">
+  <img src="kube_04-1-2.png" width="800">
+</p>
 
 ---
 
@@ -41,11 +45,21 @@
 
 **Результат:** `200 OK` — страница "Welcome to nginx!" (frontend).
 
-📸 *[Скриншот: curl http://<node-ip>/]*
+<p align="center">
+  <img src="kube_02-2-1.png" width="800">
+</p>
 
-**Результат:** редирект `/api` → `/api/` (стандартное поведение nginx внутри `network-multitool` для путей без завершающего слэша), далее `200 OK` — страница multitool (backend).
+**Результат:** редирект `/api` → `/api/`
 
-📸 *[Скриншот: curl -vL http://<node-ip>/api]*
+<p align="center">
+  <img src="kube_04-2-2.png" width="800">
+</p>
+
+Для того чтобы не получить 404, создана страница /api внутри подов
+
+<p align="center">
+  <img src="kube_04-2-3.png" width="800">
+</p>
 
 ---
 
