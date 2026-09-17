@@ -46,7 +46,7 @@
 **Результат:** `200 OK` — страница "Welcome to nginx!" (frontend).
 
 <p align="center">
-  <img src="kube_02-2-1.png" width="800">
+  <img src="kube_04-2-1.png" width="800">
 </p>
 
 **Результат:** редирект `/api` → `/api/`
